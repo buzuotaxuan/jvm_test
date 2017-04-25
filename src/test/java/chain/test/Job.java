@@ -13,6 +13,7 @@ public abstract class Job {
 		return job;
 	}
 	
+	
 	public void startNext(){
 		if(null!=next)
 			next.start();

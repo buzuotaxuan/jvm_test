@@ -6,7 +6,7 @@ public class Server {
 	
 	public Server(){
 		chain.boot().setNext(new HttpServer())
-		.setNext(new SocketServer());
+		.setNext(new SocketServer()).setNext(()-> new HttpServer());
 		
 	}
 	

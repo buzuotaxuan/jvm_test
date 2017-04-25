@@ -1,5 +1,7 @@
 package chain.test;
 
+import java.util.function.Supplier;
+
 public class Chain {
 	
 	Job boot=new Job(){
@@ -23,9 +25,16 @@ public class Chain {
 	}
 	
 	private Job last=boot;
+	
 	public Chain setNext(Job job){
 		
 		this.last=last.setNext(job);
+		return this;
+	}
+	
+	public Chain setNext(Supplier<Job> job){
+		
+		this.last=last.setNext(job.get());
 		return this;
 	}
 	
