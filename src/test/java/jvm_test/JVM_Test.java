@@ -1,8 +1,8 @@
 package jvm_test;
 
-import java.util.concurrent.atomic.AtomicInteger;
-
 import org.junit.Test;
+
+import io.netty.util.internal.StringUtil;
 
 public class JVM_Test {
 	@Test
@@ -27,7 +27,11 @@ public class JVM_Test {
 		
 //		AtomicInteger ai=new AtomicInteger();
 //		System.out.println(ai.get());
-		 System.out.println(2^30);
+		/* System.out.println(2^30);
+		 
+		 System.out.println((Integer)129==(Integer)129);*/
+		
+		
 	}
 	
 }
